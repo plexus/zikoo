@@ -16,7 +16,8 @@ gem 'rake'
 # Component requirements
 gem 'compass'
 gem 'slim'
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg'
 gem 'sequel'
 
 # Test requirements
@@ -34,4 +35,6 @@ gem 'padrino', '0.11.3'
 #   gem 'padrino-' + g, '0.11.3'
 # end
 
-gem 'analects', path: '/home/arne/github/analects'
+%w[analects hexp hexp_ui].each do |name|
+  gem name, github: "plexus/#{name}"
+end

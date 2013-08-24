@@ -5,6 +5,18 @@ module Zikoo
     register Padrino::Helpers
     register CompassInitializer
 
+    get '/:id' do
+      cedict = Cedict[params[:id].to_i]
+      H[:div, {class: "cedict cedict-#{cedict.id}"}, [
+          H[:span, cedict.traditional],
+          (H[:span, '(' + cedict.simplified + ')'] if cedict.simplified != cedict.traditional),
+          H[:span, cedict.pinyin],
+          H[:span, cedict.definitions]
+        ].compact
+      ].to_html
+    end
+
+
 
     enable :sessions
 
