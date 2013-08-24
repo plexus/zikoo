@@ -1,3 +1,9 @@
+PATH
+  remote: /home/arne/github/analects
+  specs:
+    analects (0.2.0)
+      activesupport (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -87,6 +93,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  analects!
   compass
   padrino (= 0.11.3)
   rack-test
