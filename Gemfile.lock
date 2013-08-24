@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/plexus/analects.git
-  revision: 13933cb9758e5ef78c6440ff151f430336ec4dc6
+  revision: ac7c292d76f74effab903839fde5c01c35420755
   specs:
     analects (0.2.0)
       activesupport (>= 3.1)
