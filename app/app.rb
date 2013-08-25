@@ -5,18 +5,32 @@ module Zikoo
     register Padrino::Helpers
     register CompassInitializer
 
-    get '/:id' do
-      cedict = Cedict[params[:id].to_i]
-      H[:div, {class: "cedict cedict-#{cedict.id}"}, [
-          H[:span, cedict.traditional],
-          (H[:span, '(' + cedict.simplified + ')'] if cedict.simplified != cedict.traditional),
-          H[:span, cedict.pinyin],
-          H[:span, cedict.definitions]
-        ].compact
-      ].to_html
+    def csrf_token
+      session[:csrf] ||= SecureRandom.hex(32) if defined?(session)
     end
 
+    def csrf_param
+      defined?(settings) && settings.respond_to?(:csrf_param) ?
+      settings.csrf_param : :authenticity_token
+    end
 
+    def render(hexp)
+      hexp = hexp.replace 'form' do |form|
+        form.add_child(H[:input, type: 'hidden', name: csrf_param, value: csrf_token])
+      end
+
+      H[:html, H[:body, hexp]].to_html
+    end
+
+    get '/' do
+      render SearchForm.new(action: '/search')
+    end
+
+    post '/search' do
+      filtered_params = SearchForm.new.filter(params)
+      @cedicts = Cedict.grep([:traditional, :definitions], Regexp.new('.*' + Regexp.escape(filtered_params[:query]) + '.*'))
+      render CedictList[@cedicts]
+    end
 
     enable :sessions
 

@@ -1,13 +1,11 @@
-GIT
-  remote: git://github.com/plexus/analects.git
-  revision: ac7c292d76f74effab903839fde5c01c35420755
+PATH
+  remote: /home/arne/github/analects
   specs:
     analects (0.2.0)
       activesupport (>= 3.1)
 
-GIT
-  remote: git://github.com/plexus/hexp.git
-  revision: bcf910b021c8b95e8082a0cfa10941ecb8ab9367
+PATH
+  remote: /home/arne/github/hexp
   specs:
     hexp (0.2.0)
       equalizer (~> 0.0)
@@ -15,11 +13,11 @@ GIT
       nokogiri (~> 1.6)
       sass (~> 3.2)
 
-GIT
-  remote: git://github.com/plexus/hexp_ui.git
-  revision: 7fa8361c107a196ee25ec9d62703b90508a63186
+PATH
+  remote: /home/arne/github/hexp_ui
   specs:
     hexp_ui (0.0.1)
+      aspector
       hexp (>= 0.2.0)
 
 GEM
@@ -28,6 +26,7 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    aspector (0.13.1)
     chunky_png (1.2.8)
     compass (0.12.2)
       chunky_png (~> 1.2)
