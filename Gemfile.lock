@@ -1,11 +1,13 @@
-PATH
-  remote: /home/arne/github/analects
+GIT
+  remote: git://github.com/plexus/analects.git
+  revision: fe7ae9cd8ae43df4351681a056ee556e88db8dcd
   specs:
     analects (0.2.0)
       activesupport (>= 3.1)
 
-PATH
-  remote: /home/arne/github/hexp
+GIT
+  remote: git://github.com/plexus/hexp.git
+  revision: 3ccb408f668ec6617a11ee67231ba88ba3f2f977
   specs:
     hexp (0.2.0)
       equalizer (~> 0.0)
@@ -13,8 +15,9 @@ PATH
       nokogiri (~> 1.6)
       sass (~> 3.2)
 
-PATH
-  remote: /home/arne/github/hexp_ui
+GIT
+  remote: git://github.com/plexus/hexp_ui.git
+  revision: 0198b93b273353f15a6385b4c8edda0c024430bd
   specs:
     hexp_ui (0.0.1)
       aspector

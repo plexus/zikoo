@@ -37,6 +37,6 @@ gem 'padrino', '0.11.3'
 # end
 
 %w[analects hexp hexp_ui].each do |name|
-  #gem name, github: "plexus/#{name}"
-  gem name, path: ENV['HOME'] + "/github/#{name}"
+  gem name, github: "plexus/#{name}"
+  #gem name, path: ENV['HOME'] + "/github/#{name}"
 end

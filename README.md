@@ -2,7 +2,7 @@
 
 A rewrite/repurpose of [Zikoo.org](http://zikoo.org), a learning tool for students of Mandarin.
 
-Zikoo serves as an example of what is possible by combining [Hexp](http://github.com/plexus/hexp), [Hexp UI](http://github.com/plexus/hexp), [Ting](http://github.com/plexus/ting) and [Analects](http://github.com/plexus/analects).
+Zikoo serves as an example of what is possible by combining [Hexp](http://github.com/plexus/hexp), [Hexp UI](http://github.com/plexus/hexp_ui), [Ting](http://github.com/plexus/ting) and [Analects](http://github.com/plexus/analects).
 
 ## Who is behind this
 
